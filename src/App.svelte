@@ -35,6 +35,8 @@
       bind:errorData={error}
       on:calculate-age={calculateAge}
     />
-    <Result bind:age />
+    {#key age}
+      <Result {age} />
+    {/key}
   </section>
 </main>

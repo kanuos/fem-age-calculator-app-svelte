@@ -41,7 +41,6 @@
       // check if the date is valid or not
 
       if (!isValidDate(age)) {
-        console.log(age);
         errorData = { ...errorData, day: "Must be a valid date" };
         timeoutVariable = setTimeout(resetErrors, 2500);
         return;
@@ -56,7 +55,6 @@
       // valid data
       dispatch("calculate-age");
     } catch (e) {
-      console.log(e);
       errorData = { ...errorData, day: "Must be a valid date :)" };
     }
   }
@@ -70,7 +68,7 @@
   on:submit|preventDefault={handleSubmit}
   class="w-full grid grid-rows-2 gap-y-6 md:gap-y-2"
 >
-  <div class="grid grid-cols-3 w-full gap-4 md:max-w-sm">
+  <div class="flex items-start justify-between w-full gap-4 md:max-w-sm">
     <Input type="day" bind:value={age.day} errorMsg={errorData.day} />
     <Input type="month" bind:value={age.month} errorMsg={errorData.month} />
     <Input type="year" bind:value={age.year} errorMsg={errorData.year} />

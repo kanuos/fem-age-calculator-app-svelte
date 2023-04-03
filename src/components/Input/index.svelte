@@ -27,9 +27,10 @@
     bind:value
     {placeholder}
     class:border-primary-2={errorMsg.length > 0}
+    class:border-neutral-3={value}
     class="border mt-1 border-neutral-2 w-full rounded-md p-3 transition-all focus:border-neutral-4 text-neutral-5 focus:outline-none outline-none focus-visible:outline-none text-base md:text-lg"
   />
-  <p class="text-sm text-primary-2 italic opacity-75">
+  <p class="text-sm text-primary-2 italic opacity-75 leading-3">
     <small>
       <small>
         {errorMsg}
